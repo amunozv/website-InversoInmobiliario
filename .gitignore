@@ -1,0 +1,20 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Temporales
+*.tmp
+*.log
+*.zip
+_qa-*.html
+
+# Dependencias y variables de entorno
+node_modules/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,399 @@
+/* ==========================================================================
+   INVERSO INMOBILIARIO — Ficha de búsqueda
+   Estilos específicos de encuesta.html
+   ========================================================================== */
+
+.encuesta-page{background:var(--page)}
+.encuesta-page .wa-float,
+.encuesta-page .mobile-bar{display:none!important}
+@media (max-width:900px){.encuesta-page{padding-bottom:0}}
+.encuesta-page #ficha,
+.encuesta-page #fichaPanel{scroll-margin-top:110px}
+
+/* ===== HERO ===== */
+.encuesta-hero{
+  position:relative;overflow:hidden;
+  padding-block:clamp(22px,3vw,38px) clamp(58px,7vw,96px);
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+.encuesta-hero::before{
+  content:"";position:absolute;right:-170px;top:40px;
+  width:min(560px,58vw);aspect-ratio:1;border:1px solid rgba(176,138,76,.2);
+  border-radius:50%;pointer-events:none;
+}
+.encuesta-hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 78% 16%,rgba(176,138,76,.09),transparent 38%);
+}
+.encuesta-hero > .container{position:relative;z-index:1}
+.encuesta-breadcrumb{
+  display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-bottom:30px;
+  font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted);
+}
+.encuesta-breadcrumb a{transition:color .2s}
+.encuesta-breadcrumb a:hover{color:var(--gold-text)}
+.encuesta-breadcrumb [aria-current="page"]{color:var(--green)}
+
+.encuesta-hero__grid{
+  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:clamp(34px,5vw,72px);align-items:center;
+}
+.encuesta-hero__copy h1{
+  max-width:15ch;margin-bottom:22px;
+  font-size:clamp(2.8rem,5.2vw,4.9rem);line-height:.96;letter-spacing:-.055em;
+}
+.encuesta-hero__lead{max-width:57ch;font-size:clamp(1rem,1.15vw,1.08rem);line-height:1.7;color:var(--muted)}
+.encuesta-hero__meta{
+  display:flex;flex-wrap:wrap;gap:9px 20px;
+  margin-top:28px;padding-top:18px;border-top:1px solid var(--line-strong);
+  font-size:10.5px;font-weight:700;letter-spacing:.1em;line-height:1.35;text-transform:uppercase;color:var(--muted);
+}
+.encuesta-hero__meta li{display:inline-flex;align-items:center;gap:7px}
+.encuesta-hero__meta .icon{width:14px;height:14px;color:var(--gold-text)}
+.encuesta-hero__actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:30px}
+
+.encuesta-hero__card{
+  position:relative;overflow:hidden;
+  padding:clamp(28px,3.6vw,42px);
+  border-radius:calc(var(--radius) + 8px);
+  background:var(--green);color:var(--cream);
+  box-shadow:0 30px 70px -42px rgba(15,24,21,.7);
+}
+.encuesta-hero__card::before{
+  content:"";position:absolute;right:-80px;top:-80px;
+  width:240px;height:240px;border:1px solid rgba(216,184,126,.28);border-radius:50%;
+}
+.encuesta-hero__card::after{
+  content:"";position:absolute;left:-40px;bottom:-90px;
+  width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(176,138,76,.18),transparent 68%);
+  pointer-events:none;
+}
+.encuesta-hero__card > *{position:relative;z-index:1}
+.encuesta-hero__card h2{
+  max-width:12ch;margin-bottom:24px;
+  font-size:clamp(1.8rem,2.7vw,2.45rem);line-height:1.02;
+}
+.encuesta-hero__card h2 em{color:var(--gold-light)}
+.encuesta-hero__steps{display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
+.encuesta-hero__steps li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start}
+.encuesta-hero__steps li > span{
+  display:grid;place-items:center;width:28px;height:28px;
+  border:1px solid rgba(216,184,126,.48);border-radius:50%;
+  font-family:var(--serif);font-size:11px;font-weight:600;color:var(--gold-light);
+}
+.encuesta-hero__steps strong{display:block;margin-bottom:3px;font-size:12.5px;letter-spacing:.01em;color:var(--cream)}
+.encuesta-hero__steps p{font-size:11.5px;line-height:1.55;color:rgba(247,243,235,.64)}
+.encuesta-hero__note{
+  display:flex;align-items:flex-start;gap:8px;
+  padding-top:17px;border-top:1px solid rgba(247,243,235,.16);
+  font-size:11px;line-height:1.55;color:rgba(247,243,235,.62);
+}
+.encuesta-hero__note .icon{width:15px;height:15px;margin-top:2px;flex:none;color:var(--gold-light)}
+
+/* ===== FORMULARIO ===== */
+.encuesta-form-section{padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(64px,8vw,112px)}
+.encuesta-layout{
+  display:grid;grid-template-columns:minmax(0,.64fr) minmax(0,1.36fr);
+  gap:clamp(34px,5vw,72px);align-items:start;
+}
+.encuesta-guide{position:sticky;top:108px;padding-top:8px}
+.encuesta-guide h2{max-width:10ch;margin-bottom:18px;font-size:clamp(2rem,3vw,2.8rem)}
+.encuesta-guide > p{max-width:34ch;font-size:14px;line-height:1.68;color:var(--muted)}
+.encuesta-guide__steps{margin-top:30px;border-top:1px solid var(--line-strong)}
+.encuesta-guide__steps li{
+  position:relative;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;
+  padding:15px 0;border-bottom:1px solid var(--line);
+  opacity:.52;transition:opacity .25s var(--ease),padding .25s var(--ease);
+}
+.encuesta-guide__steps li::before{
+  content:"";position:absolute;left:-15px;top:17px;bottom:17px;width:2px;border-radius:2px;
+  background:transparent;transition:background .25s var(--ease);
+}
+.encuesta-guide__steps li.is-active{opacity:1;padding-left:5px}
+.encuesta-guide__steps li.is-active::before{background:var(--gold)}
+.encuesta-guide__steps li.is-complete{opacity:.88}
+.encuesta-guide__steps li > span{
+  padding-top:1px;font-family:var(--serif);font-size:11px;font-weight:600;
+  letter-spacing:.05em;color:var(--gold-text);
+}
+.encuesta-guide__steps strong{display:block;margin-bottom:2px;font-size:12.5px;line-height:1.35;color:var(--green)}
+.encuesta-guide__steps p{font-size:11.5px;line-height:1.45;color:var(--muted)}
+.encuesta-guide__help{margin-top:26px;padding-top:19px;border-top:1px solid var(--line-strong)}
+.encuesta-guide__help > p{margin-bottom:10px;font-size:12px;line-height:1.5;color:var(--muted)}
+.encuesta-guide__help .link-arrow{display:flex;margin-top:8px;font-size:12.5px}
+
+.encuesta-panel{
+  position:relative;min-width:0;padding:clamp(22px,3.5vw,44px);
+  border:1px solid var(--line);border-radius:calc(var(--radius) + 8px);
+  background:var(--white);box-shadow:var(--shadow-card);
+}
+.encuesta-panel__head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px}
+.encuesta-panel__head h2{margin-top:4px;font-size:clamp(1.55rem,2.4vw,2.1rem)}
+.encuesta-panel__badge{
+  display:inline-flex;align-items:center;flex:none;min-height:28px;padding:0 11px;
+  border:1px solid var(--line-strong);border-radius:999px;
+  font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text);
+}
+.encuesta-panel__intro{max-width:56ch;font-size:12.5px;line-height:1.55;color:var(--muted)}
+.required-mark{color:var(--gold-text);font-weight:700}
+.encuesta-noscript{
+  margin-top:18px;padding:14px 16px;border:1px solid var(--line-strong);border-radius:var(--radius-sm);
+  background:var(--cream);font-size:13px;line-height:1.55;color:var(--muted);
+}
+.encuesta-noscript a{color:var(--gold-text);text-decoration:underline;text-underline-offset:2px}
+
+.encuesta-progress{margin:24px 0 26px}
+.encuesta-progress__top{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;
+  font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+}
+.encuesta-progress__top span:last-child{color:var(--gold-text)}
+.encuesta-progress__bar{height:4px;overflow:hidden;border-radius:999px;background:var(--sage)}
+.encuesta-progress__bar span{
+  display:block;height:100%;border-radius:inherit;background:var(--gold);
+  transition:width .35s var(--ease);
+}
+
+.encuesta-step.is-active{animation:encuestaStepIn .32s var(--ease)}
+@keyframes encuestaStepIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.encuesta-step__head{
+  display:flex;align-items:flex-start;gap:14px;
+  margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--line);
+}
+.encuesta-step__num{
+  display:grid;place-items:center;flex:none;width:38px;height:38px;
+  border:1px solid rgba(176,138,76,.55);border-radius:50%;
+  font-family:var(--serif);font-size:1rem;font-weight:600;line-height:1;color:var(--gold-text);
+}
+.encuesta-step__head h3{margin-bottom:4px;font-size:clamp(1.3rem,2vw,1.55rem)}
+.encuesta-step__head h3:focus{outline:none}
+.encuesta-step__head p{max-width:48ch;font-size:12.5px;line-height:1.5;color:var(--muted)}
+
+/* ===== PRESUPUESTO ===== */
+.form-divider{
+  display:flex;align-items:center;gap:12px;margin:26px 0 18px;
+  font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text);
+}
+.form-divider::before,
+.form-divider::after{content:"";flex:1;height:1px;background:var(--line-strong)}
+.form-row--single{grid-template-columns:1fr}
+.field-hint{margin:-2px 0 9px;font-size:11px;line-height:1.45;color:var(--muted)}
+
+.precio-rango__summary{
+  margin:0 0 6px;font-family:var(--serif);font-size:clamp(1.2rem,2vw,1.42rem);
+  font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--green);
+}
+.precio-rango__row{
+  display:grid;grid-template-columns:48px minmax(0,1fr) 82px;
+  align-items:center;gap:10px;margin-top:2px;
+}
+.precio-rango__row label{
+  margin:0;font-size:10.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);
+}
+.precio-rango__row output{
+  font-size:11.5px;font-weight:700;text-align:right;white-space:nowrap;color:var(--gold-text);
+}
+.precio-rango input[type="range"]{
+  -webkit-appearance:none;appearance:none;
+  width:100%;height:30px;margin:0;padding:0;background:transparent;cursor:pointer;
+}
+.precio-rango input[type="range"]::-webkit-slider-runnable-track{
+  height:6px;border:0;border-radius:999px;background:var(--sage);
+}
+.precio-rango input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:22px;height:22px;margin-top:-8px;
+  border:3px solid var(--white);border-radius:50%;background:var(--gold);
+  box-shadow:0 2px 8px rgba(23,35,31,.24);cursor:grab;
+}
+.precio-rango input[type="range"]:active::-webkit-slider-thumb{cursor:grabbing}
+.precio-rango input[type="range"]::-moz-range-track{
+  height:6px;border:0;border-radius:999px;background:var(--sage);
+}
+.precio-rango input[type="range"]::-moz-range-thumb{
+  width:16px;height:16px;border:3px solid var(--white);border-radius:50%;
+  background:var(--gold);box-shadow:0 2px 8px rgba(23,35,31,.24);cursor:grab;
+}
+.precio-rango input[type="range"]:focus{outline:none}
+.precio-rango input[type="range"]:focus-visible::-webkit-slider-thumb{
+  box-shadow:0 0 0 4px rgba(176,138,76,.24),0 2px 8px rgba(23,35,31,.24);
+}
+.precio-rango input[type="range"]:focus-visible::-moz-range-thumb{
+  box-shadow:0 0 0 4px rgba(176,138,76,.24),0 2px 8px rgba(23,35,31,.24);
+}
+.precio-rango.is-invalid input[type="range"]::-webkit-slider-runnable-track{background:rgba(163,58,43,.28)}
+.precio-rango.is-invalid input[type="range"]::-moz-range-track{background:rgba(163,58,43,.28)}
+.precio-rango__hint{margin-top:8px;font-size:11px;line-height:1.5;color:var(--muted)}
+
+.encuesta-page .field input[type="number"]{
+  width:100%;height:48px;padding:0 13px;
+  border:1px solid var(--line-strong);border-radius:var(--radius-sm);
+  background:var(--white);font-size:14px;color:var(--green);
+  appearance:textfield;-moz-appearance:textfield;
+  transition:border-color .2s,box-shadow .2s;
+}
+.encuesta-page .field input[type="number"]::-webkit-outer-spin-button,
+.encuesta-page .field input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.encuesta-page .field textarea{
+  display:block;width:100%;min-height:108px;padding:12px 13px;
+  border:1px solid var(--line-strong);border-radius:var(--radius-sm);
+  background:var(--white);font-size:14px;line-height:1.55;color:var(--green);
+  resize:vertical;transition:border-color .2s,box-shadow .2s;
+}
+.encuesta-page .field input[type="number"]:focus,
+.encuesta-page .field textarea:focus{
+  outline:none;border-color:var(--gold-text);box-shadow:0 0 0 3px rgba(176,138,76,.18);
+}
+.encuesta-page .field input[type="number"][aria-invalid="true"],
+.encuesta-page .field textarea[aria-invalid="true"]{
+  border-color:var(--error);box-shadow:0 0 0 3px rgba(163,58,43,.12);
+}
+.encuesta-page .field textarea::placeholder{color:#8A918C;opacity:1}
+.encuesta-honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.encuesta-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:8px}
+.encuesta-nav .btn{margin-left:auto;min-width:170px}
+.encuesta-nav .back-link{margin-top:0;order:0}
+
+.encuesta-alert{
+  margin-top:22px;padding:18px 20px;
+  border:1px solid rgba(163,58,43,.3);border-radius:var(--radius-sm);
+  background:rgba(163,58,43,.06);
+}
+.encuesta-alert > strong{display:block;margin-bottom:4px;font-size:13.5px;color:var(--error)}
+.encuesta-alert > p{font-size:12.5px;line-height:1.55;color:var(--muted)}
+.encuesta-alert__actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:14px}
+.encuesta-alert__actions .link-arrow{font-size:12px}
+
+.encuesta-success{max-width:570px;padding:clamp(10px,2vw,24px) 0 6px}
+.encuesta-success__icon{
+  display:grid;place-items:center;width:58px;height:58px;margin-bottom:20px;
+  border-radius:50%;background:rgba(176,138,76,.14);color:var(--gold-text);
+}
+.encuesta-success__icon .icon{width:27px;height:27px}
+.encuesta-success h2{margin-bottom:12px;font-size:clamp(1.9rem,3vw,2.5rem)}
+.encuesta-success > p{max-width:49ch;margin-bottom:22px;font-size:14px;line-height:1.68;color:var(--muted)}
+.encuesta-success__actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.encuesta-success__actions .back-link{margin-top:0}
+.encuesta-success__note{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;line-height:1.55;color:var(--muted)}
+.encuesta-success__note a{color:var(--gold-text);text-decoration:underline;text-underline-offset:2px}
+
+/* ===== ENVIANDO ===== */
+.encuesta-sending{
+  position:fixed;inset:0;z-index:1000;display:grid;place-items:center;
+  padding:24px;cursor:progress;
+  background:rgba(255,255,255,.84);
+  -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+}
+.encuesta-sending__box{
+  display:grid;justify-items:center;gap:9px;width:min(100%,340px);
+  padding:24px 26px;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--white);box-shadow:var(--shadow-card);text-align:center;
+}
+.encuesta-sending__spinner{
+  width:38px;height:38px;border:3px solid var(--sage);border-top-color:var(--gold);
+  border-radius:50%;animation:encuestaSpin .8s linear infinite;
+}
+.encuesta-sending strong{font-size:14px;line-height:1.35;color:var(--green)}
+.encuesta-sending p{font-size:12px;line-height:1.55;color:var(--muted)}
+body.encuesta-submitting{overflow:hidden}
+body.encuesta-submitting,
+body.encuesta-submitting *{cursor:progress!important}
+@keyframes encuestaSpin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){
+  .encuesta-sending__spinner{animation-duration:2s}
+}
+
+/* ===== FAQ ===== */
+.encuesta-faq{
+  background:var(--sage);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.encuesta-faq .faq__intro .link-arrow{margin-top:2px}
+.encuesta-faq .faq__item p{
+  max-width:62ch;padding:0 48px 22px 0;
+  font-size:14.5px;line-height:1.68;color:var(--muted);
+}
+.encuesta-faq .faq__item a{color:var(--gold-text);text-decoration:underline;text-underline-offset:2px}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:1100px){
+  .encuesta-hero__grid{gap:clamp(28px,4vw,52px)}
+  .encuesta-layout{gap:clamp(28px,4vw,52px)}
+}
+
+@media (max-width:980px){
+  .encuesta-hero__grid{grid-template-columns:1fr;gap:34px}
+  .encuesta-hero__copy h1{max-width:17ch}
+  .encuesta-hero__card{max-width:720px}
+  .encuesta-layout{grid-template-columns:1fr;gap:32px}
+  .encuesta-guide{position:static;padding-top:0}
+  .encuesta-guide h2{max-width:12ch}
+  .encuesta-guide > p{max-width:58ch}
+  .encuesta-guide__steps{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;
+    margin-top:24px;
+  }
+  .encuesta-guide__steps li::before{display:none}
+  .encuesta-guide__steps li.is-active{padding-left:0}
+  .encuesta-guide__help{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:20px}
+  .encuesta-guide__help > p{margin:0}
+  .encuesta-guide__help .link-arrow{margin-top:0}
+}
+
+@media (max-width:760px){
+  .encuesta-hero{padding-top:18px;padding-bottom:58px}
+  .encuesta-breadcrumb{margin-bottom:24px}
+  .encuesta-hero__copy h1{font-size:clamp(2.55rem,8vw,3.5rem)}
+  .encuesta-hero__meta{gap:8px 16px;font-size:10px}
+  .encuesta-hero__actions{gap:14px}
+  .encuesta-hero__card{padding:26px 22px;border-radius:var(--radius)}
+  .encuesta-guide__steps{grid-template-columns:1fr}
+  .encuesta-panel{padding:24px 20px;border-radius:var(--radius)}
+  .encuesta-panel__head{gap:10px}
+  .encuesta-panel__badge{display:none}
+  .encuesta-progress{margin:20px 0 24px}
+  .encuesta-step__head{gap:12px;margin-bottom:20px}
+  .encuesta-step__num{width:34px;height:34px;font-size:.92rem}
+  .encuesta-nav .btn{min-width:0}
+  .encuesta-faq .faq__item p{padding-right:34px}
+}
+
+@media (max-width:560px){
+  .encuesta-hero__meta{display:grid;grid-template-columns:1fr;gap:7px;max-width:260px}
+  .encuesta-hero__actions .btn{width:100%}
+  .encuesta-hero__actions .link-arrow{font-size:12.5px}
+  .encuesta-guide__help{display:block}
+  .encuesta-guide__help .link-arrow{margin-top:8px}
+  .encuesta-panel{padding:22px 17px}
+  .encuesta-panel__head h2{font-size:1.52rem}
+  .encuesta-panel__intro{font-size:12px}
+  .encuesta-progress__top{font-size:9.5px}
+  .encuesta-step__head h3{font-size:1.28rem}
+  .encuesta-step__head p{font-size:12px}
+  .encuesta-nav{flex-direction:column-reverse;align-items:stretch;gap:8px}
+  .encuesta-nav .btn{width:100%;margin-left:0}
+  .encuesta-nav .back-link{align-self:center;justify-content:center}
+  .encuesta-alert{padding:16px}
+  .encuesta-alert__actions{flex-direction:column;align-items:stretch}
+  .encuesta-alert__actions .btn{width:100%}
+  .encuesta-alert__actions .link-arrow{align-self:center}
+  .encuesta-success__actions{flex-direction:column;align-items:stretch}
+  .encuesta-success__actions .btn{width:100%}
+  .encuesta-success__actions .back-link{align-self:center;justify-content:center}
+  .encuesta-faq .faq__item p{padding-right:0}
+}
+
+@media (max-width:380px){
+  .encuesta-hero__copy h1{font-size:2.35rem}
+  .encuesta-hero__card{padding:23px 18px}
+  .encuesta-panel{padding:20px 14px}
+  .encuesta-step__num{width:31px;height:31px;font-size:.84rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .encuesta-step.is-active{animation:none}
+  .encuesta-progress__bar span{transition:none}
+}
