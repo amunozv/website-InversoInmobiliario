@@ -40,6 +40,38 @@ La ficha envía los datos a:
 
 Los endpoints están configurados en `encuesta.html` y `encuesta.js`.
 
+## Ramas de trabajo
+
+- `main`: rama de **producción**. Es la que se publica con GitHub Pages. Solo debe recibir cambios revisados desde `dev`.
+- `dev`: rama de **desarrollo**. Aquí se suben las modificaciones y pruebas antes de pasar a producción.
+
+### Trabajar en desarrollo
+
+```powershell
+git switch dev
+# hacer cambios...
+git add .
+git commit -m "Descripción del cambio"
+git push origin dev
+```
+
+### Pasar cambios a producción
+
+En GitHub, abre un Pull Request desde `dev` hacia `main`. Revisa los cambios y mergea el Pull Request.
+
+También se puede hacer localmente:
+
+```powershell
+git switch main
+git pull origin main
+git merge --no-ff dev
+git push origin main
+git switch dev
+git merge main
+```
+
+Nunca trabajes directamente sobre `main`.
+
 ## Publicación
 
 El proyecto está preparado para publicarse con GitHub Pages desde la rama `main` y la carpeta raíz del repositorio.
