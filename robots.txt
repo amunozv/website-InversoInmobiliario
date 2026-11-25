@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /partials/
+Disallow: /.git/
+
+Sitemap: https://web.inversoinmobiliario.cl/sitemap.xml
