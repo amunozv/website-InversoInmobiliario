@@ -40,6 +40,8 @@ El sitio usa URLs sin `.html`:
 
 El archivo `.htaccess` redirige las URLs antiguas con `.html` a su versión limpia y sirve internamente los archivos `.html` correspondientes. También incluye la redirección a HTTPS y el bloqueo de la carpeta `.git`.
 
+Las rutas de imágenes, estilos, scripts y parciales son absolutas desde la raíz (`/assets`, `/partials`, `/styles.css`). El sitio debe publicarse en la raíz de `web.inversoinmobiliario.cl`; si se mueve a una subcarpeta, hay que ajustar esas rutas.
+
 Para SEO se incluyen:
 
 - `sitemap.xml`

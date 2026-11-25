@@ -25,8 +25,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="encuesta.css">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/encuesta.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -138,16 +138,16 @@
 </script>
 </head>
 <body class="encuesta-page">
-<div data-include="partials/header.html"></div>
+<div data-include="/partials/header.html"></div>
 
 <main id="contenido">
   <!-- HERO -->
   <section class="encuesta-hero" id="inicio" aria-labelledby="encuesta-title">
     <div class="container">
       <nav class="encuesta-breadcrumb" aria-label="Migas de pan">
-        <a href="./">Inicio</a>
+        <a href="/">Inicio</a>
         <span aria-hidden="true">/</span>
-        <a href="./#servicio">Servicio</a>
+        <a href="/#servicio">Servicio</a>
         <span aria-hidden="true">/</span>
         <span aria-current="page">Ficha de búsqueda</span>
       </nav>
@@ -569,7 +569,7 @@
               <input type="checkbox" id="consent" name="consent" value="Sí" required aria-describedby="error-consent" data-error="Necesitamos tu autorización para contactarte.">
               <div>
                 <label for="consent">Autorizo a Inverso Inmobiliario a contactarme por esta búsqueda. <span class="required-mark">*</span></label>
-                <p class="consent-note">He leído la <a href="legal#privacidad" target="_blank" rel="noopener">política de privacidad</a> y acepto el tratamiento de mis datos para esta asesoría.</p>
+                <p class="consent-note">He leído la <a href="/legal#privacidad" target="_blank" rel="noopener">política de privacidad</a> y acepto el tratamiento de mis datos para esta asesoría.</p>
                 <p class="field-error" id="error-consent" role="alert" hidden>Necesitamos tu autorización para contactarte.</p>
               </div>
             </div>
@@ -647,17 +647,17 @@
         </details>
         <details class="faq__item">
           <summary>¿Qué hacen con mis datos personales?</summary>
-          <p>Usamos tus datos solo para contactarte y preparar tu búsqueda inmobiliaria. No los vendemos ni los compartimos para fines publicitarios. Puedes revisar nuestra <a href="legal#privacidad">política de privacidad</a>.</p>
+          <p>Usamos tus datos solo para contactarte y preparar tu búsqueda inmobiliaria. No los vendemos ni los compartimos para fines publicitarios. Puedes revisar nuestra <a href="/legal#privacidad">política de privacidad</a>.</p>
         </details>
       </div>
     </div>
   </section>
 </main>
 
-<div data-include="partials/footer.html"></div>
+<div data-include="/partials/footer.html"></div>
 
-<script src="partials.js"></script>
-<script src="script.js"></script>
-<script src="encuesta.js"></script>
+<script src="/partials.js"></script>
+<script src="/script.js"></script>
+<script src="/encuesta.js"></script>
 </body>
 </html>
